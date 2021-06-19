@@ -1,0 +1,17 @@
+.idea/*
+.DS_Store
+__pycache__/
+.env
+env
+*.pyc
+.vscode/
+*.dbsendgrid.env
+latest.dump
+
+# Django stuff:
+staticfiles/
+media/
+coverage.xml
+.coverage
+docker-compose.local.env
+db_backups/
