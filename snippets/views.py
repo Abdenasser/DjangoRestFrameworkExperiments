@@ -44,7 +44,7 @@ class SnippetViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(python_snippets, many=True)
         return Response(serializer.data)
 
-    @action(detail=False)
+    @action(detail=False, serializer_class= SnippetSerializer)
     def last_python(self, request, *args, **kwargs):
         last_python_snippet = self.get_queryset().filter(language="python").last()
         serializer = self.get_serializer(last_python_snippet)
